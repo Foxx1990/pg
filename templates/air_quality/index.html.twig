@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <form action="{{ path('air_quality.station_sensors') }}">
+    <div class="container">
+        <div class="row">
+            <div class="col"></div>
+            <div id="welcome" class="col">
+                <h1>Cześć!</h1>Wybierz lokalizację dla której chcesz sprawdzić czystość powietrza:
+            </div>
+            <div class="col"></div>
+        </div>
+        <div class="row">
+            <div class="col"></div>
+            <div class="col">
+                <select name="idStation" id="select-localizations">
+                    {% for station in stations %}
+                        <option value="{{ station.id }}">{{ station.stationName }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="col"></div>
+        </div>
+        <div class="row">
+            <div class="col"></div>
+            <button class="col btn btn-success">Wyślij</button>
+            <div class="col"></div>
+        </div>
+    </div>
+    </form>
+{% endblock %}
