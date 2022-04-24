@@ -1,4 +1,4 @@
-# airQualityInMyCity
+# Zadanie rekrutacyjne
 
 Aplikacja do sprawdzania jakości powietrza. Korzysta z api 
  https://powietrze.gios.gov.pl/pjp/content/api.
